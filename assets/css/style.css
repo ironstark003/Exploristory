@@ -80,7 +80,7 @@ nav a:hover {
   width: 120px;
   height: 120px;
   margin-bottom: 2rem;
-  background-image: url("assets/img/logo.png");
+  background-image: url("../img/logo.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
