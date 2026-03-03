@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services – Exploristory</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+    <meta name="theme-color" content="#3f5d5f" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <!-- Services Content -->
+    <main>
+      <div class="container">
+        <h1 class="section-title">Our Services</h1>
+
+        <div class="cards-grid">
+          <div class="card">
+            <h3 class="service-title" onclick="openService('oneday')">
+              One-Day Trips
+            </h3>
+            <p>
+              Curated heritage site visits that bring history to life in a
+              single immersive day. Perfect for schools seeking quick yet
+              impactful learning experiences.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="service-title" onclick="openService('multiday')">
+              Multi-Day Expeditions
+            </h3>
+            <p>
+              Extended heritage journeys that allow deeper exploration, site
+              interactions, and comprehensive heritage understanding across
+              multiple locations.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="service-title" onclick="openService('inhouse')">
+              In-House Workshops
+            </h3>
+            <p>
+              Bring history into your classroom with hands-on sessions, artifact
+              simulations, and interactive learning activities designed for all
+              grade levels.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="service-title" onclick="openService('facilitator-support')">
+              Facilitator Support
+            </h3>
+            <p>
+              We partner with schools to enhance and facilitate their
+              self-curated trips, providing expert guidance and educational
+              content support.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="service-title" onclick="openService('heritage-expo')">
+              Heritage Expo Planning
+            </h3>
+            <p>
+              Comprehensive planning and execution of heritage exhibitions and
+              cultural showcases for schools and institutions.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="service-title" onclick="openService('custom')">
+              Custom Programs
+            </h3>
+            <p>
+              Tailored experiential learning experiences designed specifically
+              for your school's unique needs and curriculum requirements.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 3rem">
+          Our Operating Cities
+        </h2>
+
+        <div class="city-tabs">
+          <button class="city-btn active" onclick="showCity('chennai', this)">
+            Chennai
+          </button>
+          <button class="city-btn" onclick="showCity('bangalore', this)">
+            Bangalore
+          </button>
+          <button class="city-btn" onclick="showCity('indore', this)">
+            Indore
+          </button>
+          <button class="city-btn" onclick="showCity('ujjain', this)">
+            Ujjain
+          </button>
+          <button class="city-btn" onclick="showCity('nagpur', this)">
+            Nagpur
+          </button>
+          <button class="city-btn" onclick="showCity('khandwa', this)">
+            Khandwa
+          </button>
+          <button class="city-btn" onclick="showCity('surat', this)">
+            Surat
+          </button>
+        </div>
+
+        <div id="chennai" class="box city-content active">
+          <h3>Chennai</h3>
+          <p>
+            Explore the magnificent temple architecture of South India, from
+            Mahabalipuram's Shore Temple to the intricate carvings of local
+            sites. Our Chennai programs focus on Early Historic Tamil Heritage,
+            coastal archaeology, and Epigraphy.
+          </p>
+          <p>
+            <strong>Popular Programs:</strong>
+            Mahabalipuram Heritage Trail, Kanchipuram Temple Architecture Walk,
+            Gingee Maratha History Expedition etc.
+          </p>
+        </div>
+
+        <div id="bangalore" class="box city-content">
+          <h3>Bangalore</h3>
+          <p>
+            Discover the rich history of the Karnataka through ancient forts,
+            temples, musuems and archaeological sites surrounding Bangalore.
+            Programs focus on medieval history, fort architecture, and local
+            epigraphical heritage.
+          </p>
+          <p>
+            <strong>Popular Programs:</strong>
+            Ancient/Medieval/Colonial Bangalore Exploration, Mythic Society
+            Epigraphical workshop, Devanahalli fort exploration etc.
+          </p>
+        </div>
+
+        <div id="indore" class="box city-content">
+          <h3>Indore</h3>
+          <p>
+            Uncover the Malwa plateau's historical significance through visits
+            to ancient temples, forts, and archaeological sites. Rich in both
+            Maratha and ancient heritage.
+          </p>
+          <p>
+            <strong>Popular Programs:</strong>
+            Maheshwar Heritage Expedition, Ujjain heritage Trail, Rock cut
+            wonders in Bagh and Mandsaur Expeditions etc.
+          </p>
+        </div>
+
+        <div id="ujjain" class="box city-content">
+          <h3>Ujjain</h3>
+          <p>
+            One of India's most historically significant cities. Explore the
+            ancient capital of the Malwa region, famous temples, and its role in
+            Indian astronomy and trade routes.
+          </p>
+          <p>
+            <strong>Popular Programs:</strong>
+            Ancient Ujjain Discovery, Temple architecture in Malwa at Ram
+            Janardhan Temple, Historical Art and Aesthetics at Triveni Museum,
+            Dhar and Mandsaur visits etc.
+          </p>
+        </div>
+
+        <div id="nagpur" class="box city-content">
+          <h3>Nagpur</h3>
+          <p>
+            Discover the rich Buddhist heritage, ancient trade routes, and local
+            temple architecture. Nagpur offers unique insights into central
+            Indian history.
+          </p>
+          <p>
+            <strong>Popular Programs:</strong>
+            Central Indian Heritage Trail at Nagardhan, Ramtek and Mansar
+            Archaeological Expedition, Nagpur Archaeology Walk etc.
+          </p>
+        </div>
+
+        <div id="khandwa" class="box city-content">
+          <h3>Khandwa</h3>
+          <p>
+            Explore the historical significance of Malwa region near the city,
+            known for its temples, forts, and archaeological sites representing
+            various historical periods.
+          </p>
+          <p>
+            <strong>Popular Programs:</strong>
+            Maheshwar History Trail, Burhanpur Heritage Expedition, etc
+          </p>
+        </div>
+
+        <div id="surat" class="box city-content">
+          <h3>Surat</h3>
+          <p>
+            Discover the maritime heritage and mercantile history of this
+            important port city. Explore colonial architecture, ancient trade
+            heritage, and coastal archaeology.
+          </p>
+          <p>
+            <strong>Popular Programs:</strong>
+            Maritime Heritage Tour, Colonial Architecture Walk, Museum vists
+          </p>
+        </div>
+
+        <div class="expansion-box">
+          <p><strong>✦ We're Expanding ✦</strong></p>
+          <p>
+            Open to curating experiences in your city! Reach out to us to
+            discuss custom heritage programs tailored to your city and school's
+            needs.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Service Modal -->
+    <div id="serviceModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Load layout & page JS -->
+    <script src="/assets/js/layout.js"></script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>
