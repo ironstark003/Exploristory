@@ -44,5 +44,5 @@ function setActiveNavLink() {
   });
 }
 
-loadPartial("navbar", "/partials/navbar.html");
-loadPartial("footer", "/partials/footer.html");
+loadPartial("navbar", "partials/navbar.html");
+loadPartial("footer", "partials/footer.html");
