@@ -67,43 +67,46 @@ nav a:hover {
     var(--primary-teal) 100%
   );
   color: var(--cream);
-  padding: 4rem 2rem;
+  padding: 2rem 2rem 2.6rem; /* slightly more space at bottom */
   text-align: center;
-  min-height: 500px;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
+/* Logo */
 .logo-hero {
-  width: 120px;
-  height: 120px;
-  margin-bottom: 2rem;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 0.5rem;
   background-image: url("../img/logo.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: scroll;
 }
 
+/* Main Title */
 .hero h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
   letter-spacing: 2px;
+  margin-bottom: 0.1rem; /* tighter title → tagline spacing */
 }
 
-.hero p {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
-  font-style: italic;
-}
-
+/* Tagline */
 .tagline {
   color: var(--accent-gold);
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 1px;
+  margin-bottom: 0.45rem;
+}
+
+/* Description */
+.hero p {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 0;
 }
 
 /* Base Box Component */
