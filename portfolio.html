@@ -128,12 +128,52 @@
 
         <!-- Gallery Section -->
         <div class="box gallery-box">
-          <h3 class="section-heading mb-1">Photo Gallery & More</h3>
+          <h3 class="section-heading mb-1">Photo Gallery</h3>
           <p>
-            Click here to view our complete photo gallery from expeditions and
-            workshops across all cities.
+            Highlights from our heritage expeditions and student activities.
           </p>
-          <p class="gallery-note">[Add gallery link or photo carousel here]</p>
+
+          <div class="gallery-grid">
+            <img src="assets/img/gallery/1.jpg" loading="lazy" />
+            <img src="assets/img/gallery/2.jpg" loading="lazy" />
+            <img src="assets/img/gallery/3.jpg" loading="lazy" />
+            <img src="assets/img/gallery/4.jpg" loading="lazy" />
+            <img src="assets/img/gallery/5.jpg" loading="lazy" />
+            <img src="assets/img/gallery/6.jpg" loading="lazy" />
+            <img src="assets/img/gallery/7.jpg" loading="lazy" />
+            <img src="assets/img/gallery/8.jpg" loading="lazy" />
+
+            <!-- Hidden initially -->
+            <img
+              src="assets/img/gallery/9.jpg"
+              class="gallery-extra"
+              loading="lazy"
+            />
+            <img
+              src="assets/img/gallery/10.jpg"
+              class="gallery-extra"
+              loading="lazy"
+            />
+            <img
+              src="assets/img/gallery/11.jpg"
+              class="gallery-extra"
+              loading="lazy"
+            />
+          </div>
+
+          <button class="gallery-toggle-btn" id="galleryToggleBtn">
+            Show More Photos
+          </button>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="gallery-lightbox" id="galleryLightbox">
+          <span class="gallery-close">&times;</span>
+
+          <img class="gallery-lightbox-img" id="galleryLightboxImg" />
+
+          <button class="gallery-prev">&#10094;</button>
+          <button class="gallery-next">&#10095;</button>
         </div>
       </div>
     </main>
@@ -143,5 +183,6 @@
 
     <!-- Load layout -->
     <script src="assets/js/layout.js" defer></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

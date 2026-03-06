@@ -17,7 +17,6 @@ function showCity(cityId, btn) {
   }
 }
 
-
 /* SERVICE MODAL SECTION */
 
 function openService(type) {
@@ -42,7 +41,6 @@ function openService(type) {
   modal.style.display = "flex";
 }
 
-
 function showCityDetail(service, city) {
   const body = document.getElementById("modalBody");
 
@@ -55,11 +53,9 @@ function showCityDetail(service, city) {
   `;
 }
 
-
 function closeModal() {
   document.getElementById("serviceModal").style.display = "none";
 }
-
 
 /* HELPER FUNCTIONS */
 
@@ -70,15 +66,13 @@ function getServiceTitle(type) {
     workshop: "In-House Workshops",
     facilitator: "Facilitator Support",
     expo: "Heritage Expo Planning",
-    custom: "Custom Programs"
+    custom: "Custom Programs",
   };
 
   return titles[type] || "";
 }
 
-
 function getCityDescription(service, city) {
-
   /* ===== ONE DAY ===== */
   if (service === "oneday") {
     return `One-day experiential heritage program in ${capitalize(city)} 
@@ -118,7 +112,85 @@ function getCityDescription(service, city) {
   return "";
 }
 
-
 function capitalize(word) {
   return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
+/* GALLERY LIGHTBOX SECTION */
+
+const galleryImages = document.querySelectorAll(".gallery-grid img");
+const galleryLightbox = document.getElementById("galleryLightbox");
+const galleryLightboxImg = document.getElementById("galleryLightboxImg");
+const galleryClose = document.querySelector(".gallery-close");
+const galleryNext = document.querySelector(".gallery-next");
+const galleryPrev = document.querySelector(".gallery-prev");
+
+let galleryIndex = 0;
+
+function openGalleryImage(i) {
+  galleryIndex = i;
+  galleryLightboxImg.src = galleryImages[galleryIndex].src;
+  galleryLightbox.classList.add("active");
+}
+
+galleryImages.forEach((img, i) => {
+  img.addEventListener("click", () => openGalleryImage(i));
+});
+
+galleryNext.onclick = () => {
+  galleryIndex = (galleryIndex + 1) % galleryImages.length;
+  galleryLightboxImg.src = galleryImages[galleryIndex].src;
+};
+
+galleryPrev.onclick = () => {
+  galleryIndex =
+    (galleryIndex - 1 + galleryImages.length) % galleryImages.length;
+  galleryLightboxImg.src = galleryImages[galleryIndex].src;
+};
+
+galleryClose.onclick = () => {
+  galleryLightbox.classList.remove("active");
+};
+
+galleryLightbox.addEventListener("click", (e) => {
+  if (e.target === galleryLightbox) {
+    galleryLightbox.classList.remove("active");
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    galleryLightbox.classList.remove("active");
+  }
+});
+/* GALLERY SHOW MORE / SHOW LESS */
+
+const galleryToggleBtn = document.getElementById("galleryToggleBtn");
+
+if (galleryToggleBtn) {
+  let expanded = false;
+
+  galleryToggleBtn.addEventListener("click", () => {
+    const extraImages = document.querySelectorAll(".gallery-extra");
+
+    if (!expanded) {
+      extraImages.forEach((img) => {
+        img.style.display = "block";
+      });
+
+      galleryToggleBtn.textContent = "Show Less Photos";
+      expanded = true;
+    } else {
+      extraImages.forEach((img) => {
+        img.style.display = "none";
+      });
+
+      galleryToggleBtn.textContent = "Show More Photos";
+      expanded = false;
+
+      document.querySelector(".gallery-box").scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  });
 }
