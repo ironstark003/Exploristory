@@ -23,38 +23,52 @@ function openService(type) {
   const modal = document.getElementById("serviceModal");
   const body = document.getElementById("modalBody");
 
-  let content = `
-    <h2>${getServiceTitle(type)}</h2>
-    <p>Select a city:</p>
-    <ul>
-      <li onclick="showCityDetail('${type}','chennai')">Chennai</li>
-      <li onclick="showCityDetail('${type}','bangalore')">Bangalore</li>
-      <li onclick="showCityDetail('${type}','indore')">Indore</li>
-      <li onclick="showCityDetail('${type}','ujjain')">Ujjain</li>
-      <li onclick="showCityDetail('${type}','nagpur')">Nagpur</li>
-      <li onclick="showCityDetail('${type}','khandwa')">Khandwa</li>
-      <li onclick="showCityDetail('${type}','surat')">Surat</li>
-    </ul>
-  `;
+  body.innerHTML = "";
+
+  if (type === "oneday") {
+    let content = `
+      <h2>${getServiceTitle(type)}</h2>
+
+      <div class="city-modal-layout">
+        <div class="city-list">
+          <button onclick="showCityDetail('chennai', this)">Chennai</button>
+          <button onclick="showCityDetail('bangalore', this)">Bangalore</button>
+          <button onclick="showCityDetail('indore', this)">Indore</button>
+          <button onclick="showCityDetail('ujjain', this)">Ujjain</button>
+          <button onclick="showCityDetail('nagpur', this)">Nagpur</button>
+          <button onclick="showCityDetail('khandwa', this)">Khandwa</button>
+          <button onclick="showCityDetail('surat', this)">Surat</button>
+        </div>
+        <div id="cityContentPanel" class="city-content-panel">
+          <p>Select a city to view the program details.</p>
+        </div>
+      </div>
+    `;
+
+    body.innerHTML = content;
+    showCityDetail("chennai", document.querySelector(".city-list button"));
+  } else {
+    const content = document.getElementById("service-" + type).innerHTML;
+
+    body.innerHTML = content + `<button onclick="closeModal()">Close</button>`;
+  }
+
+  modal.style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+
+function showCityDetail(city, btn) {
+  const body = document.getElementById("cityContentPanel");
+  const content = document.getElementById("city-" + city).innerHTML;
 
   body.innerHTML = content;
-  modal.style.display = "flex";
-}
 
-function showCityDetail(service, city) {
-  const body = document.getElementById("modalBody");
+  const buttons = document.querySelectorAll(".city-list button");
+  buttons.forEach((b) => b.classList.remove("active"));
 
-  const description = getCityDescription(service, city);
-
-  body.innerHTML = `
-    <h2>${capitalize(city)} – ${getServiceTitle(service)}</h2>
-    <p>${description}</p>
-    <button onclick="openService('${service}')">Back</button>
-  `;
-}
-
-function closeModal() {
-  document.getElementById("serviceModal").style.display = "none";
+  if (btn) {
+    btn.classList.add("active");
+  }
 }
 
 /* HELPER FUNCTIONS */
@@ -72,48 +86,15 @@ function getServiceTitle(type) {
   return titles[type] || "";
 }
 
-function getCityDescription(service, city) {
-  /* ===== ONE DAY ===== */
-  if (service === "oneday") {
-    return `One-day experiential heritage program in ${capitalize(city)} 
-    including guided interpretation, interactive activities, and curriculum-aligned exploration.`;
-  }
+/* close Modal FUNCTION */
 
-  /* ===== MULTI DAY ===== */
-  if (service === "multiday") {
-    return `Multi-day immersive heritage expedition in ${capitalize(city)} 
-    featuring deeper site visits, workshops, and comprehensive cultural engagement.`;
-  }
+function closeModal() {
+  const modal = document.getElementById("serviceModal");
+  const body = document.getElementById("modalBody");
 
-  /* ===== WORKSHOP ===== */
-  if (service === "workshop") {
-    return `In-house archaeology and heritage workshop conducted in ${capitalize(city)} 
-    with hands-on simulations and classroom engagement modules.`;
-  }
-
-  /* ===== FACILITATOR ===== */
-  if (service === "facilitator") {
-    return `Expert facilitation support for school-curated trips in ${capitalize(city)}, 
-    including academic guidance and structured learning materials.`;
-  }
-
-  /* ===== EXPO ===== */
-  if (service === "expo") {
-    return `Comprehensive heritage expo planning in ${capitalize(city)} 
-    including exhibition design, content curation, and student engagement activities.`;
-  }
-
-  /* ===== CUSTOM ===== */
-  if (service === "custom") {
-    return `Customized experiential heritage program designed specifically 
-    for institutions in ${capitalize(city)}, tailored to curriculum needs.`;
-  }
-
-  return "";
-}
-
-function capitalize(word) {
-  return word.charAt(0).toUpperCase() + word.slice(1);
+  modal.style.display = "none";
+  body.innerHTML = "";
+  document.body.style.overflow = "auto";
 }
 
 /* GALLERY LIGHTBOX SECTION */
@@ -163,6 +144,7 @@ document.addEventListener("keydown", (e) => {
     galleryLightbox.classList.remove("active");
   }
 });
+
 /* GALLERY SHOW MORE / SHOW LESS */
 
 const galleryToggleBtn = document.getElementById("galleryToggleBtn");

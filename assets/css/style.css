@@ -207,13 +207,79 @@ nav a:hover {
 .modal-content {
   background: var(--cream);
   width: 90%;
-  max-width: 800px; /* Bigger width */
-  max-height: 85vh; /* Prevent overflow */
-  overflow-y: auto; /* Scroll if long content */
+  max-width: 800px;
+  max-height: 85vh;
   padding: 2.5rem;
   border-radius: 14px;
   position: relative;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+/* One Day Service City Layout */
+
+.city-modal-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+  margin-top: 1rem;
+}
+
+.city-list {
+  display: flex;
+  flex-direction: column;
+  width: 210px;
+  background: var(--cream);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.city-list button {
+  all: unset;
+
+  display: block;
+  width: 100%;
+  padding: 14px 18px;
+  background: var(--cream);
+  color: var(--primary-teal);
+  border-left: 4px solid var(--primary-teal);
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.city-list button {
+  background: var(--cream) !important;
+  color: var(--primary-teal) !important;
+}
+.city-list button:hover {
+  background: var(--primary-teal) !important;
+  color: var(--cream) !important;
+}
+
+.city-list button,
+.city-list button:hover {
+  border-radius: 0 !important;
+  margin: 0 !important;
+}
+
+.city-list button:hover,
+.city-list button.active {
+  background: var(--primary-teal);
+  color: var(--cream);
+}
+
+.city-content-panel {
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.hidden-content {
+  display: none;
 }
 
 /* Close Button */
@@ -284,6 +350,8 @@ nav a:hover {
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s ease;
+  display: block;
+  margin-left: auto;
 }
 
 .modal button:hover {
@@ -788,27 +856,36 @@ footer p {
     font-size: 34px;
     right: 20px;
   }
-
-  @media (max-width: 1000px) {
-    .gallery-grid {
-      column-count: 3;
-    }
+  .city-modal-layout {
+    grid-template-columns: 1fr;
   }
 
-  @media (max-width: 700px) {
-    .gallery-grid {
-      column-count: 2;
-    }
+  .city-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
+}
 
-  @media (max-width: 480px) {
-    .gallery-grid {
-      column-count: 1;
-    }
+@media (max-width: 1000px) {
+  .gallery-grid {
+    column-count: 3;
   }
+}
 
-  /* Modal city layout for mobile */
-  .modal ul {
-    grid-template-columns: repeat(2, auto);
+@media (max-width: 700px) {
+  .gallery-grid {
+    column-count: 2;
   }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    column-count: 1;
+  }
+}
+
+/* Modal city layout for mobile */
+.modal ul {
+  grid-template-columns: repeat(2, auto);
 }
