@@ -860,10 +860,15 @@ footer p {
 
   /* ===== SERVICE MODAL MOBILE FIX ===== */
 
+  .modal {
+    padding: 10px;
+  }
+
   .modal-content {
-    width: 94%;
+    width: 92vw;
     max-height: 90vh;
-    padding: 1.4rem;
+    padding: 1.2rem;
+    overflow: hidden;
   }
 
   .city-modal-layout {
@@ -885,11 +890,12 @@ footer p {
     border-left: none;
     border-bottom: none;
     border-radius: 6px;
-    padding: 10px;
+    padding: 9px;
   }
 
   .service-content {
-    height: 320px;
+    max-height: 55vh;
+    overflow-y: auto;
     border-left: none;
     padding-left: 0;
     padding-top: 10px;
