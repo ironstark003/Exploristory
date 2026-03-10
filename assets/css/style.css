@@ -857,14 +857,42 @@ footer p {
     font-size: 34px;
     right: 20px;
   }
+
+  /* ===== SERVICE MODAL MOBILE FIX ===== */
+
+  .modal-content {
+    width: 94%;
+    max-height: 90vh;
+    padding: 1.4rem;
+  }
+
   .city-modal-layout {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .city-list {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+    gap: 6px;
+  }
+
+  .city-list button {
+    flex: 1 1 45%;
+    text-align: center;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 6px;
+    padding: 10px;
+  }
+
+  .service-content {
+    height: 320px;
+    border-left: none;
+    padding-left: 0;
+    padding-top: 10px;
   }
 }
 
