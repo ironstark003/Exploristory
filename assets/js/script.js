@@ -36,10 +36,11 @@ function openService(type) {
           <button onclick="showCityDetail('indore', this)">Indore</button>
           <button onclick="showCityDetail('ujjain', this)">Ujjain</button>
           <button onclick="showCityDetail('nagpur', this)">Nagpur</button>
+          <button onclick="showCityDetail('mumbai', this)">Mumbai</button>
           <button onclick="showCityDetail('khandwa', this)">Khandwa</button>
           <button onclick="showCityDetail('surat', this)">Surat</button>
         </div>
-        <div id="cityContentPanel" class="city-content-panel">
+        <div id="cityContentPanel" class="service-panel">
           <p>Select a city to view the program details.</p>
         </div>
       </div>
@@ -50,7 +51,11 @@ function openService(type) {
   } else {
     const content = document.getElementById("service-" + type).innerHTML;
 
-    body.innerHTML = content + `<button onclick="closeModal()">Close</button>`;
+    body.innerHTML = `
+    <div class="service-panel">
+      ${content}
+    </div>
+  `;
   }
 
   modal.style.display = "flex";
@@ -61,7 +66,7 @@ function showCityDetail(city, btn) {
   const body = document.getElementById("cityContentPanel");
   const content = document.getElementById("city-" + city).innerHTML;
 
-  body.innerHTML = content;
+  body.innerHTML = content.trim();
 
   const buttons = document.querySelectorAll(".city-list button");
   buttons.forEach((b) => b.classList.remove("active"));
@@ -77,7 +82,7 @@ function getServiceTitle(type) {
   const titles = {
     oneday: "One-Day Trips",
     multiday: "Multi-Day Expeditions",
-    workshop: "In-House Workshops",
+    workshops: "In-House Workshops",
     facilitator: "Facilitator Support",
     expo: "Heritage Expo Planning",
     custom: "Custom Programs",
