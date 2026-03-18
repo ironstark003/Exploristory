@@ -69,8 +69,8 @@
     <!-- Navbar -->
     <div id="navbar"></div>
 
-    <!-- Home Content -->
-    <main>
+    <!-- Home Section -->
+    <main id="home">
       <header class="hero">
         <div class="logo-hero"></div>
 
@@ -141,10 +141,1267 @@
       </div>
     </main>
 
+    <!-- Services Section -->
+    <section id="services">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <h2 class="subsection-title mt-2">Our Existing Plans</h2>
+
+        <div class="cards-grid">
+          <div class="card">
+            <h3 class="service-title" onclick="openService('oneday')">
+              One-Day Trips
+            </h3>
+            <p>
+              Curated heritage site visits that bring history to life in a
+              single immersive day. Perfect for schools seeking quick yet
+              impactful learning experiences.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="service-title" onclick="openService('multiday')">
+              Multi-Day Expeditions
+            </h3>
+            <p>
+              Extended heritage journeys that allow deeper exploration, site
+              interactions, and comprehensive heritage understanding across
+              multiple locations.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="service-title" onclick="openService('workshops')">
+              In-House Workshops
+            </h3>
+            <p>
+              Bring history into your classroom with hands-on sessions, artifact
+              simulations, and interactive learning activities designed for all
+              grade levels.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="subsection-title mt-2">Other Services We Can Provide</h2>
+
+        <div class="cards-grid">
+          <div class="card">
+            <h3 class="service-title" onclick="openService('facilitator')">
+              Facilitator Support
+            </h3>
+            <p>
+              We partner with schools to enhance and facilitate their
+              self-curated trips, providing expert guidance and educational
+              content support.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="service-title" onclick="openService('expo')">
+              Heritage Expo Planning
+            </h3>
+            <p>
+              Comprehensive planning and execution of heritage exhibitions and
+              cultural showcases for schools and institutions.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="service-title" onclick="openService('custom')">
+              Custom Programs
+            </h3>
+            <p>
+              Tailored experiential learning experiences designed specifically
+              for your school's unique needs and curriculum requirements.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 3rem">
+          Our Operating Cities
+        </h2>
+
+        <div class="city-tabs pill-list">
+          <button class="city-btn active" onclick="showCity('chennai', this)">
+            Chennai
+          </button>
+          <button class="city-btn" onclick="showCity('bangalore', this)">
+            Bangalore
+          </button>
+          <button class="city-btn" onclick="showCity('indore', this)">
+            Indore
+          </button>
+          <button class="city-btn" onclick="showCity('ujjain', this)">
+            Ujjain
+          </button>
+          <button class="city-btn" onclick="showCity('nagpur', this)">
+            Nagpur
+          </button>
+          <button class="city-btn" onclick="showCity('khandwa', this)">
+            Khandwa
+          </button>
+          <button class="city-btn" onclick="showCity('surat', this)">
+            Surat
+          </button>
+        </div>
+
+        <div id="chennai" class="box city-content active">
+          <h3>Chennai</h3>
+          <p>
+            Explore the magnificent temple architecture of South India, from
+            Mahabalipuram's Shore Temple to the intricate carvings of local
+            sites. Our Chennai programs focus on Early Historic Tamil Heritage,
+            coastal archaeology, and Epigraphy.
+          </p>
+          <p>
+            <strong>Popular Programs:</strong>
+            Mahabalipuram Heritage Trail, Kanchipuram Temple Architecture Walk,
+            Gingee Maratha History Expedition etc.
+          </p>
+        </div>
+
+        <div id="bangalore" class="box city-content">
+          <h3>Bangalore</h3>
+          <p>
+            Discover the rich history of the Karnataka through ancient forts,
+            temples, musuems and archaeological sites surrounding Bangalore.
+            Programs focus on medieval history, fort architecture, and local
+            epigraphical heritage.
+          </p>
+          <p>
+            <strong>Popular Programs:</strong>
+            Ancient/Medieval/Colonial Bangalore Exploration, Mythic Society
+            Epigraphical workshop, Devanahalli fort exploration etc.
+          </p>
+        </div>
+
+        <div id="indore" class="box city-content">
+          <h3>Indore</h3>
+          <p>
+            Uncover the Malwa plateau's historical significance through visits
+            to ancient temples, forts, and archaeological sites. Rich in both
+            Maratha and ancient heritage.
+          </p>
+          <p>
+            <strong>Popular Programs:</strong>
+            Maheshwar Heritage Expedition, Ujjain heritage Trail, Rock cut
+            wonders in Bagh and Mandsaur Expeditions etc.
+          </p>
+        </div>
+
+        <div id="ujjain" class="box city-content">
+          <h3>Ujjain</h3>
+          <p>
+            One of India's most historically significant cities. Explore the
+            ancient capital of the Malwa region, famous temples, and its role in
+            Indian astronomy and trade routes.
+          </p>
+          <p>
+            <strong>Popular Programs:</strong>
+            Ancient Ujjain Discovery, Temple architecture in Malwa at Ram
+            Janardhan Temple, Historical Art and Aesthetics at Triveni Museum,
+            Dhar and Mandsaur visits etc.
+          </p>
+        </div>
+
+        <div id="nagpur" class="box city-content">
+          <h3>Nagpur</h3>
+          <p>
+            Discover the rich Buddhist heritage, ancient trade routes, and local
+            temple architecture. Nagpur offers unique insights into central
+            Indian history.
+          </p>
+          <p>
+            <strong>Popular Programs:</strong>
+            Central Indian Heritage Trail at Nagardhan, Ramtek and Mansar
+            Archaeological Expedition, Nagpur Archaeology Walk etc.
+          </p>
+        </div>
+
+        <div id="khandwa" class="box city-content">
+          <h3>Khandwa</h3>
+          <p>
+            Explore the historical significance of Malwa region near the city,
+            known for its temples, forts, and archaeological sites representing
+            various historical periods.
+          </p>
+          <p>
+            <strong>Popular Programs:</strong>
+            Maheshwar History Trail, Burhanpur Heritage Expedition, etc
+          </p>
+        </div>
+
+        <div id="surat" class="box city-content">
+          <h3>Surat</h3>
+          <p>
+            Discover the maritime heritage and mercantile history of this
+            important port city. Explore colonial architecture, ancient trade
+            heritage, and coastal archaeology.
+          </p>
+          <p>
+            <strong>Popular Programs:</strong>
+            Maritime Heritage Tour, Colonial Architecture Walk, Museum vists
+          </p>
+        </div>
+
+        <div class="expansion-box">
+          <p><strong>✦ We're Expanding ✦</strong></p>
+          <p>
+            Open to curating experiences in your city! Reach out to us to
+            discuss custom heritage programs tailored to your city and school's
+            needs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Works Section -->
+    <section id="work">
+      <div class="container">
+        <h2 class="section-title">Our Work & Feedbacks</h2>
+
+        <!-- Portfolio Item 1 -->
+        <div class="box portfolio-item">
+          <div class="portfolio-header">
+            <h3>National Public School, Chennai</h3>
+            <p>One-Day Heritage Expedition | Mahabalipuram | [Date]</p>
+          </div>
+
+          <div class="portfolio-body">
+            <p>
+              <strong>Overview:</strong> One-day expedition at Mahabalipuram,
+              exploring and understanding the Pallava heritage along with
+              learning the development of Dravidian Temple Architecture.
+            </p>
+
+            <p>
+              <strong>Highlights:</strong> Monument exploration, hands-on
+              activities like treasure hunt and picture bingo.
+            </p>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 2 -->
+        <div class="box portfolio-item">
+          <div class="portfolio-header">
+            <h3>C.S.I. Bain ICSE School, Chennai</h3>
+            <p>One-Day Heritage Expedition | Mahabalipuram | 29-08-2025</p>
+          </div>
+
+          <div class="portfolio-body">
+            <p>
+              <strong>Overview:</strong> One-day expedition at Mahabalipuram,
+              exploring and understanding the Pallava heritage along with
+              learning the development of Dravidian Temple Architecture.
+            </p>
+
+            <p>
+              <strong>Highlights:</strong> Monument exploration, hands-on
+              activities like treasure hunt and picture bingo.
+            </p>
+
+            <div class="feedback">
+              <p class="feedback-quote">
+                "Our visit to Mahabalipuram was a structured and informative
+                experience. The guides from Exploristory provided clear, factual
+                explanations without unnecessary dramatization."
+              </p>
+              <p class="feedback-author">
+                — S. Titus Nathaniel, Student IX F, C.S.I. Bain School ICSE
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="box gallery-box">
+          <h3 class="section-heading mb-1">Photo Gallery</h3>
+          <p>
+            Highlights from our heritage expeditions and student activities.
+          </p>
+
+          <div class="gallery-slider">
+            <button class="slider-btn prev">&#10094;</button>
+
+            <div class="slider-track">
+              <img src="assets/img/gallery/1.jpg" loading="lazy" />
+              <img src="assets/img/gallery/2.jpg" loading="lazy" />
+              <img src="assets/img/gallery/3.jpg" loading="lazy" />
+              <img src="assets/img/gallery/4.jpg" loading="lazy" />
+              <img src="assets/img/gallery/5.jpg" loading="lazy" />
+              <img src="assets/img/gallery/6.jpg" loading="lazy" />
+              <img src="assets/img/gallery/7.jpg" loading="lazy" />
+              <img src="assets/img/gallery/8.jpg" loading="lazy" />
+              <img src="assets/img/gallery/9.jpg" loading="lazy" />
+              <img src="assets/img/gallery/10.jpg" loading="lazy" />
+            </div>
+
+            <button class="slider-btn next">&#10095;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team section -->
+    <section id="team">
+      <div class="container">
+        <h2 class="section-title">Meet Our Team & Mentors</h2>
+
+        <!-- Founders -->
+        <h2 class="subsection-title mt-2">Founders</h2>
+
+        <div class="team-grid">
+          <div class="box team-member">
+            <div class="team-profile">
+              <img src="assets/img/team/manya-jain.png" alt="Manya Jain" />
+
+              <div class="team-text">
+                <h3>Manya Jain</h3>
+                <p class="role">Co-Founder & Executive Director</p>
+                <p class="bio">
+                  Passionate archaeologist with a vision to make history and the
+                  past more enagaging for the younger generations. Manya designs
+                  all our curriculum programs and leads experiential learning
+                  initiatives.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="box team-member">
+            <div class="team-profile">
+              <img
+                src="assets/img/team/rampalaniappan.png"
+                alt="Rampalaniappan PL"
+              />
+
+              <div class="team-text">
+                <h3>Rampalaniappan PL</h3>
+                <p class="role">Co-Founder & Executive Director</p>
+                <p class="bio">
+                  An expert prehistorian, dedicated to bringing heritage
+                  education to schools across India. He is a master of
+                  presenting complex knowlegde and ideas into creative and
+                  interactive sessions while also leading some of our best
+                  expeditions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mentors -->
+        <h2 class="subsection-title mt-3">Our Mentors</h2>
+
+        <div class="team-grid">
+          <div class="box team-member">
+            <div class="team-profile">
+              <img
+                src="assets/img/team/amv-subramaniam.png"
+                alt="Dr. AMV Subramaniam"
+              />
+
+              <div class="team-text">
+                <h3>Dr. AMV Subramaniam</h3>
+                <p class="role">Heritage & Archaeology Mentor</p>
+                <p class="bio">
+                  He has been a constant source of inspiration, driving
+                  innovative approaches to heritage interpretation and public
+                  engagement. His technical guidance encourages us to explore
+                  more effective ways to make heritage accessible, meaningful
+                  and engaging for wider audiences, fostering a deeper
+                  appreciation of our cultural legacy.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="box team-member">
+            <div class="team-profile">
+              <img
+                src="assets/img/team/jinu-koshy.png"
+                alt="Prof. Jinu Koshy"
+              />
+
+              <div class="team-text">
+                <h3>Prof. Jinu Koshy</h3>
+                <p class="role">Heritage Learning & Pedagogy Mentor</p>
+                <p class="bio">
+                  Dr. Jinu Koshy is the Excavation In-charge at the Department
+                  of Ancient History and Archaeology, University of Madras. He
+                  has led 15+ excavations across South India and specializes in
+                  Palaeolithic Archaeology, Lithic and Pottery analysis, Rock
+                  Art, and Field Archaeology. He has published over 25 research
+                  papers and currently studies settlement patterns in the Lower
+                  Palar River Basin and Rock Art sites in Kurnool District.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contributors & Support -->
+        <h2 class="subsection-title mt-3">Our Other Contributors</h2>
+
+        <div class="contributors-slider">
+          <button class="slider-btn prev">&#10094;</button>
+
+          <div class="contributors-track">
+            <img src="assets/img/contributors/1.jpg" />
+            <img src="assets/img/contributors/2.jpg" />
+            <img src="assets/img/contributors/3.jpg" />
+            <img src="assets/img/contributors/4.jpg" />
+            <img src="assets/img/contributors/5.jpg" />
+            <img src="assets/img/contributors/6.jpg" />
+            <img src="assets/img/contributors/7.jpg" />
+          </div>
+
+          <button class="slider-btn next">&#10095;</button>
+        </div>
+
+        <!-- Vision -->
+        <div class="box vision-box">
+          <h3 class="section-heading mb-1">Our Collective Vision</h3>
+          <p>
+            Our team and mentors share a common belief: that experiential
+            learning transforms how children understand and connect with
+            history. Together, we're building a movement to revolutionize
+            heritage education across India.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us section -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+
+        <div class="contact-wrapper">
+          <!-- LEFT SIDE -->
+          <div class="contact-left">
+            <h2>Reach Us</h2>
+
+            <p><strong>Phone:</strong> +91 9993 316 161</p>
+            <p><strong>Email:</strong> exploristoryeducations@gmail.com</p>
+
+            <p>
+              <strong>Address:</strong><br />
+              Your city details here
+            </p>
+          </div>
+
+          <!-- RIGHT SIDE -->
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <input type="text" placeholder="First Name" required />
+              <input type="text" placeholder="Last Name" required />
+            </div>
+
+            <input type="email" placeholder="Email" required />
+            <input type="tel" placeholder="Contact Number" required />
+
+            <textarea placeholder="Message" rows="5" required></textarea>
+
+            <!-- reCAPTCHA -->
+            <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+
+            <button type="submit" id="submitBtn">
+              <span class="btn-text">Submit</span>
+              <span class="btn-loader"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox for images -->
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close">&times;</span>
+
+      <img class="lightbox-img" id="lightboxImg" />
+
+      <button class="lightbox-prev">&#10094;</button>
+      <button class="lightbox-next">&#10095;</button>
+    </div>
+
+    <!-- Service Content -->
+    <!-- multiday -->
+    <div id="service-multiday" class="hidden-content service-content">
+      <h3>Multi-Day Heritage Expeditions</h3>
+
+      <p>
+        Our multi-day expeditions offer immersive learning journeys where
+        students explore historical landscapes, archaeological sites, and
+        cultural traditions through guided fieldwork and experiential
+        activities. These programs connect classroom learning with real-world
+        heritage exploration.
+      </p>
+
+      <h4>Featured Expeditions</h4>
+
+      <ul>
+        <li>
+          <strong>Ancient Treasures of Madhya Pradesh (5-7 Days)</strong> -
+          Explore Bhimbetka rock shelters, Bhojpur Temple, Sanchi Stupa,
+          Udayagiri Caves and the Bhopal Tribal Museum while studying
+          prehistoric art, early temples, and Buddhist heritage.
+        </li>
+
+        <li>
+          <strong>Dholavira Heritage Expedition (5 Days)</strong> - Discover the
+          Indus Valley Civilisation through visits to the Dholavira
+          archaeological site and museum, learning about ancient town planning,
+          trade systems, and Harappan life.
+        </li>
+
+        <li>
+          <strong>Maharashtra Heritage Expedition (4-6 Days)</strong> - Study
+          Maratha history through visits to Sinhagad, Pratapgad, Suvarnadurg and
+          Raigad forts while exploring warfare strategies and leadership under
+          Shivaji Maharaj.
+        </li>
+
+        <li>
+          <strong>Keeladi Archaeological Expedition (2-3 Days)</strong> -
+          Experience early Tamil civilisation at the Keeladi excavation site and
+          museum through artefact observation and archaeological interpretation.
+        </li>
+
+        <li>
+          <strong>Karnataka Temple Heritage Journey (4-5 Days)</strong> - Visit
+          Badami, Aihole and Pattadakal to understand the evolution of Indian
+          temple architecture and stone-carving traditions.
+        </li>
+
+        <li>
+          <strong>Amritsar: Freedom & Partition Expedition (4-5 Days)</strong> -
+          Explore the Partition Museum, Jallianwala Bagh, Wagah Border and
+          Golden Temple to understand India's independence movement and the
+          impact of Partition.
+        </li>
+
+        <li>
+          <strong>Udaipur & Mewar Heritage Expedition (4-5 Days)</strong> -
+          Discover Rajput heritage through visits to Udaipur City Palace,
+          Kumbalgarh Fort, Chittorgarh Fort and Dilwara Jain Temples.
+        </li>
+
+        <li>
+          <strong>Jaipur: The Pink City Legacy (4 Days)</strong> - Study
+          Jaipur's planned city design through visits to Amer Fort, Jaigarh
+          Fort, City Palace, Jantar Mantar and the Walled City.
+        </li>
+      </ul>
+
+      <h4>Learning Highlights</h4>
+
+      <ul>
+        <li>Hands-on archaeological and heritage exploration.</li>
+        <li>Role-playing historical scenarios and storytelling sessions.</li>
+        <li>Architectural observation and cultural interpretation.</li>
+        <li>
+          Creative activities such as sketching, documentation and site
+          analysis.
+        </li>
+      </ul>
+
+      <h4>Approximate Program Cost</h4>
+
+      <ul>
+        <li>
+          ₹12,500 - ₹30,000 per student depending on destination and duration.
+        </li>
+      </ul>
+
+      <p>
+        Programs include accommodation, meals, travel within the destination,
+        subject experts, and specially curated student workbooks. Expeditions
+        can be customized according to the school's curriculum and requirements.
+      </p>
+    </div>
+
+    <!-- workshops -->
+    <div id="service-workshops" class="hidden-content service-content">
+      <h3>In-House Heritage Workshops</h3>
+
+      <p>
+        Our in-house workshops bring archaeology and heritage directly into the
+        classroom through engaging hands-on activities. Students learn how
+        historians and archaeologists study the past while developing critical
+        thinking, creativity, and teamwork skills.
+      </p>
+
+      <h4>Workshop Activities</h4>
+
+      <ul>
+        <li>
+          <strong>Rock Art Simulation</strong> - Students create natural
+          pigments from plant materials and paint prehistoric-style rock art.
+        </li>
+
+        <li>
+          <strong>Mock Excavation</strong> - A simulated archaeological dig
+          where students excavate artifacts and learn excavation techniques.
+        </li>
+
+        <li>
+          <strong>Source Story Session</strong> - Students analyze historical
+          images, texts, and artifacts to reconstruct past events.
+        </li>
+
+        <li>
+          <strong>Pottery Making</strong> - Hands-on activity where students
+          create pottery vessels using traditional techniques.
+        </li>
+
+        <li>
+          <strong>Pottery Decoration & Reconstruction</strong> - Students
+          decorate pottery and later reconstruct broken fragments like
+          archaeologists.
+        </li>
+
+        <li>
+          <strong>Inscription Decipherment</strong> - Learn ancient scripts such
+          as Brahmi and decode historical inscriptions.
+        </li>
+
+        <li>
+          <strong>Forensic Archaeology</strong> - Study skeletal remains to
+          understand age, health, and life of past populations.
+        </li>
+
+        <li>
+          <strong>Garbage Archaeology</strong> - Students analyze modern waste
+          to understand lifestyle patterns using archaeological methods.
+        </li>
+      </ul>
+
+      <h4>Program Highlights</h4>
+
+      <ul>
+        <li>Hands-on archaeological learning experiences.</li>
+        <li>
+          Activities designed for primary, middle and high school students.
+        </li>
+        <li>Sessions conducted by trained heritage facilitators.</li>
+        <li>Programs adaptable for classrooms or school grounds.</li>
+      </ul>
+
+      <h4>Approximate Cost</h4>
+
+      <ul>
+        <li>₹150 - ₹250 per student depending on workshop type.</li>
+      </ul>
+
+      <p>
+        Workshops can be customised based on grade level, school requirements,
+        and available space.
+      </p>
+    </div>
+
+    <!-- facilitator -->
+    <div id="service-facilitator" class="hidden-content service-content">
+      <h3>Facilitator Support</h3>
+
+      <p>
+        Schools planning their own heritage visits can partner with Exploristory
+        for expert facilitation and academic guidance during the trip. Our
+        specialists help transform a regular visit into a structured learning
+        experience for students.
+      </p>
+
+      <h4>What We Provide</h4>
+
+      <ul>
+        <li>Expert heritage facilitators during site visits</li>
+        <li>
+          Educational interpretation of monuments and archaeological sites
+        </li>
+        <li>Student engagement activities and discussions</li>
+        <li>Historical context and storytelling for better understanding</li>
+      </ul>
+
+      <h4>Program Benefits</h4>
+
+      <ul>
+        <li>Enhances educational value of school-organised trips</li>
+        <li>Helps students connect historical knowledge with real locations</li>
+        <li>Encourages active participation and inquiry-based learning</li>
+      </ul>
+    </div>
+
+    <!-- expo -->
+    <div id="service-expo" class="hidden-content service-content">
+      <h3>Heritage Expo Planning</h3>
+
+      <p>
+        Exploristory assists schools in designing and organising engaging
+        heritage exhibitions and cultural showcases that encourage students to
+        explore history through creativity and research.
+      </p>
+
+      <h4>What We Offer</h4>
+
+      <ul>
+        <li>Theme development for heritage exhibitions</li>
+        <li>Guidance for student research projects</li>
+        <li>Exhibit design and display planning</li>
+        <li>Interactive heritage learning modules</li>
+      </ul>
+
+      <h4>Learning Outcomes</h4>
+
+      <ul>
+        <li>Encourages historical research and creativity</li>
+        <li>Promotes teamwork and presentation skills</li>
+        <li>Builds deeper appreciation for cultural heritage</li>
+      </ul>
+    </div>
+
+    <!-- custom -->
+    <div id="service-custom" class="hidden-content service-content">
+      <h3>Custom Heritage Programs</h3>
+
+      <p>
+        Every school has different learning goals. Exploristory designs custom
+        heritage programs tailored to specific academic objectives, student age
+        groups, and available locations.
+      </p>
+
+      <h4>Possible Program Options</h4>
+
+      <ul>
+        <li>Customized one-day heritage visits</li>
+        <li>Special thematic workshops</li>
+        <li>Local heritage exploration programs</li>
+        <li>Multi-day educational heritage journeys</li>
+      </ul>
+
+      <h4>Flexible Design</h4>
+
+      <ul>
+        <li>Programs aligned with school curriculum</li>
+        <li>Adaptable duration and learning activities</li>
+        <li>Designed for different grade levels</li>
+      </ul>
+    </div>
+
+    <!-- City-Content in Oneday Service -->
+    <!-- Chennai -->
+    <div id="city-chennai" class="hidden-content">
+      <h3>Chennai - One Day Trip</h3>
+
+      <p>
+        This program introduces students to the architectural, cultural, and
+        colonial heritage of Tamil Nadu through guided site exploration and
+        interactive learning activities.
+      </p>
+
+      <h4>Key Heritage Sites</h4>
+      <ul>
+        <li>
+          Mahabalipuram - Shore Temple, Five Rathas, Arjuna's Penance and
+          Krishna's Butter Ball.
+        </li>
+        <li>
+          Egmore Government Museum - Chola bronzes, archaeological gallery and
+          children's museum.
+        </li>
+        <li>
+          Fort St. George - Fort Museum, St. Mary's Church and early colonial
+          structures.
+        </li>
+        <li>
+          Historic Churches of Chennai - Santhome Basilica, Luz Church, Armenian
+          Church and St. Thomas Church.
+        </li>
+        <li>Kanchipuram - Kailasanatha Temple and ancient Jain temples.</li>
+        <li>
+          Gingee Fort - Rajagiri Citadel, Kalyana Mahal and medieval
+          fortification structures.
+        </li>
+      </ul>
+
+      <h4>Learning Activities</h4>
+      <ul>
+        <li>Architecture observation and sketching exercises.</li>
+        <li>Artifact analysis and museum exploration activities.</li>
+        <li>Epigraphy and inscription interpretation.</li>
+        <li>Historical mapping and heritage documentation projects.</li>
+      </ul>
+
+      <h4>Indicative Cost</h4>
+      <ul>
+        <li>₹1,100 - ₹1,700 per student depending on the destination.</li>
+        <li>
+          Includes AC transport, entry fees, meals, facilitators and activity
+          materials.
+        </li>
+      </ul>
+
+      <p>
+        Programs can be customised according to school requirements. For
+        detailed planning and bookings, please contact us through the Contact
+        section.
+      </p>
+    </div>
+
+    <!-- Bangalore -->
+    <div id="city-bangalore" class="hidden-content">
+      <h3>Bangalore - One Day Heritage Trail</h3>
+
+      <p>
+        Explore the historical layers of Bangalore through forts, temples,
+        colonial buildings, and cultural landmarks that reflect the city's
+        transformation across centuries. This experiential expedition introduces
+        students to medieval dynasties, colonial administration, and the
+        evolution of modern Bangalore through guided heritage exploration.
+      </p>
+
+      <h4>Key Heritage Sites</h4>
+      <ul>
+        <li>
+          <strong>Begur Fort</strong> - Early medieval site known for the famous
+          inscription containing the earliest reference to the name “Bengaluru”.
+        </li>
+        <li>
+          <strong>Devanahalli Fort</strong> - 16th-century polygonal fort
+          associated with Hyder Ali and Tipu Sultan.
+        </li>
+        <li>
+          <strong>Bangalore Fort</strong> - Originally built by Kempegowda and
+          later expanded with stone fortifications.
+        </li>
+        <li>
+          <strong>Tipu Sultan's Summer Palace</strong> - Indo-Islamic wooden
+          palace reflecting Mysorean architecture and Tipu Sultan's rule.
+        </li>
+        <li>
+          <strong>Someshwara Temple, Halasuru</strong> - Chola-period temple
+          with Vijayanagara additions showcasing Dravidian architecture.
+        </li>
+        <li>
+          <strong>Mayo Hall & Kempegowda Museum</strong> - Colonial civic
+          building illustrating administrative history.
+        </li>
+      </ul>
+
+      <h4>Learning Activities</h4>
+      <ul>
+        <li>
+          Guided heritage walks identifying architectural and defensive
+          features.
+        </li>
+        <li>Inscription reading and historical interpretation exercises.</li>
+        <li>Architecture sketching and sculpture documentation.</li>
+        <li>
+          Group discussions on city growth, governance, and heritage
+          conservation.
+        </li>
+        <li>
+          Interactive tasks such as heritage quizzes, mapping activities, and
+          model making.
+        </li>
+      </ul>
+
+      <h4>Program Includes</h4>
+      <ul>
+        <li>AC transport for school transfers.</li>
+        <li>Entry fees and expert heritage facilitators.</li>
+        <li>Packed lunch and refreshments.</li>
+        <li>Student activity workbook and learning materials.</li>
+      </ul>
+
+      <h4>Indicative Cost</h4>
+      <ul>
+        <li>
+          Approximately ₹800 - ₹1500 per student depending on group size and
+          itinerary.
+        </li>
+      </ul>
+
+      <p>
+        The program is flexible and customizable depending on the sites selected
+        by the school. For detailed itineraries and bookings, please contact us
+        through the Contact section.
+      </p>
+    </div>
+
+    <!-- Indore -->
+    <div id="city-indore" class="hidden-content">
+      <h3>Indore - One Day Heritage Trip</h3>
+
+      <p>
+        Explore the historic town of Maheshwar, known for its magnificent fort,
+        riverfront temples, and rich craft traditions. This heritage expedition
+        introduces students to the architectural legacy of the Holkar dynasty
+        and the cultural life along the Narmada River.
+      </p>
+
+      <h4>Key Heritage Sites</h4>
+      <ul>
+        <li>
+          <strong>Maheshwar Fort</strong> - A historic riverside fort associated
+          with Ahilya Bai Holkar and the Holkar dynasty.
+        </li>
+        <li>
+          <strong>Rajwada Palace</strong> - The royal residence reflecting the
+          administrative and cultural life of the period.
+        </li>
+        <li>
+          <strong>Narmada Ghats</strong> - Iconic stone ghats along the Narmada
+          River showcasing temple architecture and river culture.
+        </li>
+        <li>
+          <strong>Rehwa Society</strong> - A traditional weaving center where
+          students learn about Maheshwari handloom textiles.
+        </li>
+      </ul>
+
+      <h4>Learning Activities</h4>
+      <ul>
+        <li>Guided heritage walk through the fort complex.</li>
+        <li>Observation of architectural styles and monument features.</li>
+        <li>Interaction with traditional weavers and craft demonstrations.</li>
+        <li>Creative documentation through sketches and photography.</li>
+      </ul>
+
+      <h4>Approximate Cost</h4>
+      <ul>
+        <li>₹1300 per student (for groups around 45 students).</li>
+      </ul>
+
+      <p>
+        The program includes travel, site entry, meals, safety provisions, and
+        specially curated learning activities. Schools can contact us for
+        customized itineraries.
+      </p>
+    </div>
+
+    <!-- Ujjain -->
+    <div id="city-ujjain" class="hidden-content">
+      <h3>Ujjain - One Day Heritage Trip</h3>
+
+      <p>
+        Explore the cultural and religious heritage of Ujjain through key temple
+        sites and museum experiences. This trip introduces students to the
+        spiritual traditions, historical narratives, and architectural elements
+        that define one of India's most ancient cities.
+      </p>
+
+      <h4>Key Heritage Sites</h4>
+      <ul>
+        <li>
+          <strong>Ram Janardhan Mandir</strong> - A historic temple reflecting
+          traditional architecture and religious practices of the region.
+        </li>
+        <li>
+          <strong>Triveni Museum</strong> - A curated museum showcasing
+          sculptures, artifacts, and historical exhibits related to Ujjain's
+          heritage.
+        </li>
+      </ul>
+
+      <h4>Learning Activities</h4>
+      <ul>
+        <li>Guided exploration of temple architecture and symbolism.</li>
+        <li>Understanding cultural and religious significance of Ujjain.</li>
+        <li>Observation and interpretation of museum artifacts.</li>
+        <li>Interactive discussions on history and heritage.</li>
+      </ul>
+
+      <h4>Approximate Cost</h4>
+      <ul>
+        <li>₹650 per student (for groups around 100 students).</li>
+      </ul>
+
+      <p>
+        The program includes transportation, entry tickets, facilitator support,
+        and an evening snack. Additional meals can be arranged on request.
+        Schools can contact us for customized plans and inclusions.
+      </p>
+    </div>
+
+    <!-- Nagpur -->
+    <div id="city-nagpur" class="hidden-content">
+      <h3>Nagpur - One Day Heritage Expedition</h3>
+
+      <p>
+        This educational expedition explores the ancient heritage of Vidarbha
+        through the historic Ramtek Fort and the Mansar Archaeological Site.
+        Students learn about medieval fort architecture, temple traditions, and
+        archaeological research through guided site exploration and interactive
+        activities.
+      </p>
+
+      <h4>Key Sites</h4>
+      <ul>
+        <li>
+          <strong>Ramtek Fort & Temple Complex</strong> - Includes the Ram
+          Temple, Karpur Baoli, Varaha statue and several medieval temples
+          around the hill.
+        </li>
+        <li>
+          <strong>Mansar Archaeological Site</strong> - An important site
+          associated with the Vakataka dynasty and early urban settlement
+          remains.
+        </li>
+      </ul>
+
+      <h4>Learning Activities</h4>
+      <ul>
+        <li>Temple architecture and fortification study.</li>
+        <li>Sketching and documentation of sculptures and inscriptions.</li>
+        <li>
+          Introduction to archaeological methods such as stratigraphy and
+          dating.
+        </li>
+        <li>Artifact interpretation using replica objects.</li>
+        <li>
+          Group discussions and creative reconstruction of ancient settlements.
+        </li>
+      </ul>
+
+      <h4>Program Includes</h4>
+      <ul>
+        <li>AC transport from school to the heritage sites.</li>
+        <li>Expert archaeologists and facilitators guiding the program.</li>
+        <li>Entry fees to monuments and archaeological sites.</li>
+        <li>Packed lunch and refreshments.</li>
+        <li>Activity material and student workbooks.</li>
+      </ul>
+
+      <h4>Indicative Cost</h4>
+      <ul>
+        <li>Approximately ₹1200 per student.</li>
+        <li>Group discounts available for larger school groups.</li>
+      </ul>
+
+      <p>
+        Programs can be customized according to the school's academic
+        requirements. For detailed planning and bookings, please contact us
+        through the Contact section.
+      </p>
+    </div>
+
+    <!-- Mumbai -->
+    <div id="city-mumbai" class="hidden-content">
+      <h3>Mumbai - One Day Heritage Expedition</h3>
+
+      <p>
+        Explore the rich and diverse heritage of Mumbai through ancient cave
+        complexes, medieval forts, colonial architecture, and world-class
+        museums. This experiential learning program allows students to
+        investigate history through observation, teamwork, and interactive
+        heritage activities.
+      </p>
+
+      <h4>Key Heritage Sites</h4>
+      <ul>
+        <li>
+          <strong>Elephanta Caves</strong> - UNESCO heritage site known for its
+          rock-cut sculptures and depictions of Hindu mythology.
+        </li>
+        <li>
+          <strong>Kanheri Caves</strong> - Ancient Buddhist monastic complex
+          showcasing rock-cut architecture and water management systems.
+        </li>
+        <li>
+          <strong>Jogeshwari & Mahakali Caves</strong> - Early cave temples
+          reflecting evolving architectural styles.
+        </li>
+        <li>
+          <strong>Vasai & Worli Forts</strong> - Coastal forts highlighting
+          military planning and maritime defense.
+        </li>
+        <li>
+          <strong>Colonial Fort Area</strong> - Historic district with Gothic
+          and colonial-era civic buildings.
+        </li>
+        <li>
+          <strong>CSMVS & Dr. Bhau Daji Lad Museum</strong> - Museums preserving
+          artifacts and cultural history of the region.
+        </li>
+      </ul>
+
+      <h4>Learning Activities</h4>
+      <ul>
+        <li>
+          Heritage treasure hunts and archaeological exploration challenges.
+        </li>
+        <li>Decoding sculptures, symbols, and religious iconography.</li>
+        <li>Architecture observation and mapping activities.</li>
+        <li>Group discussions on heritage conservation and urban evolution.</li>
+        <li>Museum artifact identification and interpretation exercises.</li>
+      </ul>
+
+      <h4>Program Includes</h4>
+      <ul>
+        <li>AC transport for school transfers.</li>
+        <li>Entry fees and expert heritage facilitators.</li>
+        <li>Packed lunch and refreshments.</li>
+        <li>Student activity workbook and learning materials.</li>
+      </ul>
+
+      <h4>Indicative Cost</h4>
+      <ul>
+        <li>
+          Approximately ₹800 - ₹1500 per student depending on group size and
+          itinerary.
+        </li>
+      </ul>
+
+      <p>
+        Programs can be customized depending on the sites selected by the
+        school. For detailed itineraries and bookings, please contact us through
+        the Contact section.
+      </p>
+    </div>
+
+    <!-- Khandwa -->
+    <div id="city-khandwa" class="hidden-content">
+      <h3>Khandwa - One Day Heritage Expeditions</h3>
+
+      <p>
+        Students explore the rich cultural and historical landscapes surrounding
+        Khandwa through guided heritage visits, storytelling, and interactive
+        learning activities designed to make history engaging and memorable.
+      </p>
+
+      <h4>Maheshwar Heritage Trail</h4>
+
+      <ul>
+        <li>
+          <strong>Maheshwar Fort Complex</strong> - Explore the historic fort
+          associated with Ahilya Bai Holkar.
+        </li>
+        <li>
+          <strong>Rajwada Palace</strong> - Discover royal life and architecture
+          of the Holkar period.
+        </li>
+        <li>
+          <strong>Narmada Ghats</strong> - Study riverfront temple architecture
+          and cultural life along the Narmada.
+        </li>
+        <li>
+          <strong>Rehwa Society</strong> - Experience traditional Maheshwari
+          handloom weaving and crafts.
+        </li>
+      </ul>
+
+      <h4>Burhanpur Heritage Exploration</h4>
+
+      <ul>
+        <li>
+          <strong>Shahi Qila</strong> - Mughal royal fort and palace complex.
+        </li>
+        <li>
+          <strong>Royal Hammam</strong> - Historic bathhouse associated with
+          Mumtaz Mahal.
+        </li>
+        <li>
+          <strong>Ahukhana</strong> - Site connected to the original plan of the
+          Taj Mahal.
+        </li>
+        <li>
+          <strong>Jama Masjid</strong> - A major Mughal-era mosque showcasing
+          Islamic architecture.
+        </li>
+        <li>
+          <strong>Khooni Bhandara</strong> - A remarkable 400-year-old
+          underground water management system.
+        </li>
+      </ul>
+
+      <h4>Learning Activities</h4>
+
+      <ul>
+        <li>Heritage walks and architectural observation.</li>
+        <li>Interactive role-playing of historical characters.</li>
+        <li>Creative sketching and monument documentation.</li>
+        <li>Treasure hunts and heritage discovery games.</li>
+        <li>Storytelling and reflection sessions.</li>
+      </ul>
+
+      <h4>Approximate Cost</h4>
+
+      <ul>
+        <li>₹1300 per student (for a group of ~45 students).</li>
+        <li>₹800 per student if the school provides its own bus.</li>
+      </ul>
+
+      <p>
+        The program includes travel, site entry, meals, safety provisions, and
+        curated heritage learning activities. Schools can contact us for
+        customized itineraries and bookings.
+      </p>
+    </div>
+
+    <!-- Surat -->
+    <div id="city-surat" class="hidden-content">
+      <h3>Surat - One Day Heritage Trail</h3>
+
+      <p>
+        Explore the historical and cultural heritage of Surat through monuments,
+        archaeological sites, and places connected to the city's rich trading
+        and cultural past. This experiential expedition helps students
+        understand how Surat developed as an important port city and cultural
+        center.
+      </p>
+
+      <h4>Key Heritage Sites</h4>
+      <ul>
+        <li>
+          <strong>Surat Fort</strong> - Historic fort built to defend the city
+          during its period as a major trading port.
+        </li>
+        <li>
+          <strong>Kadia Dungar</strong> - A 1st-2nd century CE rock-cut Buddhist
+          monument offering insight into early religious architecture.
+        </li>
+        <li>
+          <strong>Dutch, English & Armenian Cemeteries</strong> - Heritage sites
+          reflecting the presence of European traders in Surat.
+        </li>
+        <li>
+          <strong>Udvada</strong> - Important center of Parsi culture and
+          heritage.
+        </li>
+        <li>
+          <strong>Dabhoi</strong> - Historic fortified town known for its
+          medieval gateways and architecture.
+        </li>
+      </ul>
+
+      <h4>Learning Activities</h4>
+      <ul>
+        <li>Guided heritage walks and site interpretation.</li>
+        <li>Observation and documentation of architectural features.</li>
+        <li>Group discussions on trade, culture, and historical exchange.</li>
+        <li>Interactive heritage activities encouraging critical thinking.</li>
+      </ul>
+
+      <p>
+        Programs can be customized depending on the sites selected by the
+        school. For detailed itineraries and bookings, please contact us through
+        the Contact section.
+      </p>
+    </div>
+
+    <!-- Service Modal -->
+    <div id="serviceModal" class="modal">
+      <div class="modal-content">
+        <div id="modalBody"></div>
+        <button class="close-btn" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+
     <!-- Footer -->
     <div id="footer"></div>
 
     <!-- Load layout partials -->
     <script src="assets/js/layout.js" defer></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
