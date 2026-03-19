@@ -315,3 +315,19 @@ prevBtn.onclick = showPrev;
 lightbox.onclick = (e) => {
   if (e.target === lightbox) closeLightbox();
 };
+
+document.querySelectorAll(".read-more").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent weird bubbling
+
+    const card = btn.closest(".team-card");
+    card.classList.toggle("flip");
+  });
+});
+
+document.querySelectorAll(".back-btn").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    btn.closest(".team-card").classList.remove("flip");
+  });
+});
