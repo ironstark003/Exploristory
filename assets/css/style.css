@@ -1100,6 +1100,10 @@ footer p {
     height: auto;
   }
 
+  .team-card {
+    margin-bottom: 1.5rem;
+  }
+
   .team-card-inner {
     transform: none !important;
     height: auto;
@@ -1111,10 +1115,13 @@ footer p {
     transform: none;
     backface-visibility: visible;
     height: auto;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   .team-card-back {
-    margin-top: 1rem;
+    margin-top: 0;
+    border-top: none;
   }
 
   .back-btn,
