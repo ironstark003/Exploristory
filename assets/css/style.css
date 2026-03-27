@@ -610,9 +610,9 @@ nav a:hover {
   background: white;
   border-top: 4px solid var(--accent-gold);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  height: 300px;
+  height: auto;
   overflow: hidden;
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
   transition: transform 0.3s ease;
 }
 
@@ -655,20 +655,27 @@ nav a:hover {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--primary-teal);
   color: white;
   border: none;
-  padding: 8px 12px;
+  padding: 10px 14px;
   cursor: pointer;
   z-index: 10;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.prev {
-  left: -10px;
+.portfolio-slider:hover .portfolio-slider-btn {
+  opacity: 1;
 }
 
-.next {
-  right: -10px;
+.portfolio-slider-btn.prev {
+  left: 0px;
+}
+
+.portfolio-slider-btn.next {
+  right: 0px;
 }
 
 .portfolio-track {
@@ -1000,6 +1007,48 @@ footer p {
     scroll-margin-top: 80px;
   }
 
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-brand {
+    display: block;
+    color: var(--cream);
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: var(--dark-bg);
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-container {
+    justify-content: space-between;
+  }
+
+  nav ul {
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
   .logo-hero {
     width: 150px;
     height: 150px;
@@ -1052,17 +1101,25 @@ footer p {
   }
 
   .team-card-inner {
+    transform: none !important;
     height: auto;
   }
 
-  .team-card-front {
-    flex-direction: column;
-    text-align: center;
+  .team-card-front,
+  .team-card-back {
+    position: relative;
+    transform: none;
+    backface-visibility: visible;
+    height: auto;
   }
 
-  .team-card-front img {
-    width: 100px;
-    height: 120px;
+  .team-card-back {
+    margin-top: 1rem;
+  }
+
+  .back-btn,
+  .read-more {
+    display: none;
   }
 
   .contact-wrapper {
@@ -1103,41 +1160,6 @@ footer p {
 
   .city-list button {
     white-space: nowrap;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    background: var(--dark-bg);
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1.5rem 0;
-
-    display: none;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-container {
-    justify-content: space-between;
-  }
-
-  nav ul {
-    gap: 1rem;
-    flex-direction: column;
-  }
-
-  nav a {
-    font-size: 0.9rem;
   }
 }
 
