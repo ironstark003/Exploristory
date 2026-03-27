@@ -1115,6 +1115,9 @@ footer p {
     transform: none;
     backface-visibility: visible;
     height: auto;
+  }
+
+  .team-card-front {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
@@ -1122,6 +1125,9 @@ footer p {
   .team-card-back {
     margin-top: 0;
     border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background: #fafafa;
   }
 
   .back-btn,
