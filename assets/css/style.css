@@ -1085,58 +1085,16 @@ footer p {
     display: flex;
     overflow-x: auto;
     gap: 8px;
-
-    padding: 8px 5px;
-    margin-bottom: 1rem;
-
-    scrollbar-width: none;
   }
 
-  .city-list::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* BUTTON STYLE (mobile only) */
   .city-list button {
     flex: 0 0 auto;
 
-    padding: 8px 14px;
-    border-radius: 18px;
+    min-width: 90px; /* 🔥 KEY */
+    padding: 8px 10px; /* reduce padding */
 
-    border: 1px solid #ddd;
-    background: white;
-    color: var(--primary-teal);
-
-    font-size: 0.85rem;
-    font-weight: 500;
-
-    white-space: nowrap; /* 🔥 IMPORTANT */
+    font-size: 0.8rem;
   }
-
-  /* ACTIVE TAB */
-  .city-list button.active {
-    background: var(--primary-teal);
-    color: white;
-    border-color: var(--primary-teal);
-  }
-
-  /* SCROLL INDICATOR (subtle hint) */
-  .city-modal-layout {
-    position: relative;
-  }
-
-  .city-modal-layout::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 45px;
-    width: 30px;
-
-    background: linear-gradient(to right, transparent, white);
-    pointer-events: none;
-  }
-  
   .city-tabs {
     flex-wrap: wrap;
     gap: 8px;
