@@ -6,6 +6,15 @@
   --text-dark: #1f2121;
   --text-light: #626c6c;
 }
+:root {
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+:root {
+  --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 
 * {
   margin: 0;
@@ -62,7 +71,7 @@ section {
   width: 25px;
   height: 3px;
   background: var(--cream);
-  transition: 0.3s;
+  transition: transform var(--transition-normal);
 }
 
 /* Nav links */
@@ -75,7 +84,7 @@ section {
   background-color: var(--dark-bg);
   padding: 1rem 2rem;
   width: 100%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-light);
 }
 
 nav ul {
@@ -92,7 +101,7 @@ nav a {
   color: var(--accent-gold);
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: transform var(--transition-normal);
   cursor: pointer;
 }
 nav a.active {
@@ -207,16 +216,16 @@ nav a:hover {
   background: white;
   border-radius: 10px;
   padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-light);
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
   border-top: 4px solid var(--primary-teal);
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-hover);
 }
 
 .card h3 {
@@ -242,16 +251,16 @@ nav a:hover {
   padding: 1.8rem;
   border-radius: 10px;
   border-top: 4px solid var(--accent-gold);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-light);
   text-align: center;
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
 }
 
 .why-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-hover);
 }
 
 .why-card h4 {
@@ -286,7 +295,7 @@ nav a:hover {
   padding: 2.5rem;
   border-radius: 14px;
   position: relative;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--shadow-hover);
   overflow: visible;
 }
 
@@ -313,17 +322,14 @@ nav a:hover {
   color: var(--primary-teal);
   font: inherit;
   cursor: pointer;
-
   display: block;
   width: 100%;
   padding: 11px 18px;
-
   border-left: 2.5px solid var(--primary-teal);
   border-bottom: 1px solid #e0e0e0;
-
   text-align: left;
   font-weight: 600;
-  transition: all 0.2s ease;
+  transition: all var(--transition-fast);
 }
 
 .city-list button:hover,
@@ -383,7 +389,7 @@ nav a:hover {
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all var(--transition-normal);
   display: block;
   margin-left: auto;
 }
@@ -396,7 +402,7 @@ nav a:hover {
 /* City List */
 .service-title {
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color var(--transition-normal);
 }
 
 .service-title:hover {
@@ -456,7 +462,7 @@ nav a:hover {
   border-radius: 25px;
   cursor: pointer;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all var(--transition-normal);
 }
 
 .city-btn:hover,
@@ -468,7 +474,7 @@ nav a:hover {
 .city-content {
   display: none;
   margin-top: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-light);
 }
 
 .city-content.active {
@@ -496,14 +502,14 @@ nav a:hover {
   position: relative;
   width: 100%;
   height: 200px;
-  transition: transform 0.6s;
+  transition: transform var(--transition-normal);
   transform-style: preserve-3d;
   margin-bottom: -1rem;
 }
 
 .team-card:hover .team-card-inner {
   transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-hover);
 }
 
 .team-card.flip .team-card-inner {
@@ -521,7 +527,7 @@ nav a:hover {
   border-top: 4px solid var(--accent-gold);
   padding: 1.5rem;
   background: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-light);
 }
 
 /* FRONT LAYOUT */
@@ -609,11 +615,11 @@ nav a:hover {
   border-radius: 10px;
   background: white;
   border-top: 4px solid var(--accent-gold);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-light);
   height: auto;
   overflow: hidden;
   margin-bottom: 0rem;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-normal);
 }
 
 .portfolio-item:hover {
@@ -681,7 +687,7 @@ nav a:hover {
 .portfolio-track {
   display: flex;
   gap: 20px;
-  transition: transform 0.4s ease;
+  transition: transform var(--transition-normal);
 }
 
 .portfolio-body p {
@@ -741,7 +747,7 @@ nav a:hover {
   padding: 2rem;
   border-top: 4px solid var(--accent-gold);
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-light);
 }
 
 .form-row {
@@ -895,7 +901,7 @@ footer p {
 .slider-track {
   display: flex;
   gap: 12px;
-  transition: transform 0.4s ease;
+  transition: transform var(--transition-normal);
   will-change: transform;
 }
 
@@ -924,7 +930,7 @@ footer p {
 .contributors-track {
   display: flex;
   gap: 12px;
-  transition: transform 0.4s ease;
+  transition: transform var(--transition-normal);
 }
 
 .contributors-track img {
@@ -1083,18 +1089,29 @@ footer p {
 
   .city-list {
     display: flex;
+    flex-direction: row;
     overflow-x: auto;
     gap: 8px;
+    width: 100% !important;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
   }
 
   .city-list button {
-    flex: 0 0 auto;
-
-    min-width: 90px; /* 🔥 KEY */
-    padding: 8px 10px; /* reduce padding */
-
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: 90px;
+    max-width: 120px;
+    padding: 6px 10px;
     font-size: 0.8rem;
+    white-space: nowrap;
   }
+
+  .city-modal-layout {
+    grid-template-columns: 1fr;
+  }
+
   .city-tabs {
     flex-wrap: wrap;
     gap: 8px;
@@ -1107,6 +1124,20 @@ footer p {
 
   .slider-track img {
     min-width: 200px;
+  }
+
+  .city-list::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .city-list::-webkit-scrollbar-track {
+    background: #e6e6e6;
+    border-radius: 10px;
+  }
+
+  .city-list::-webkit-scrollbar-thumb {
+    background: var(--primary-teal);
+    border-radius: 10px;
   }
 
   .portfolio-item {
@@ -1179,21 +1210,6 @@ footer p {
     max-height: 90vh;
     padding: 1.5rem;
     overflow-y: auto;
-  }
-
-  .city-modal-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .city-list {
-    flex-direction: row;
-    overflow-x: auto;
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .city-list button {
-    white-space: nowrap;
   }
 }
 
