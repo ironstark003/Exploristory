@@ -39,6 +39,7 @@ function openService(type) {
           <button onclick="showCityDetail('mumbai', this)">Mumbai</button>
           <button onclick="showCityDetail('khandwa', this)">Khandwa</button>
           <button onclick="showCityDetail('surat', this)">Surat</button>
+          <button onclick="showCityDetail('delhi', this)">Delhi</button>
         </div>
         <div id="cityContentPanel" class="service-panel">
           <p>Select a city to view the program details.</p>
